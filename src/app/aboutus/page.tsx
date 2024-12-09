@@ -9,40 +9,44 @@ import { FaTwitter } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
-import Faqs from "./faqs/page";
+
 import { FaYoutube } from "react-icons/fa";
-import about from "./aboutus/page";
-import contact from "./contactus/page";
 
 import Image from "next/image";
 import { TbCircleNumber2Filled } from "react-icons/tb";
-export default function Navbar() {
+
+export default function about() {
   return (
     <>
+      <Link href="/"></Link>
       {/* //navabr */}
-      <div className="bg-slate-700 flex justify-center h-10 text-white pt-2 gap-2 grid sm:grid-cols-1 xl:grid-cols-4">
+      {/* <!-- Responsive design using Tailwind CSS --> */}
+
+{/* <!-- Header Section --> */}
+<div className="bg-slate-700 flex justify-center h-10 text-white  mx-auto pt-2 gap-2">
   <div className="flex mt-1">
     <TiTick />
   </div>
-  <div className=" ">Free Shipping On All Orders Over $50</div>
-  <div className="ml-56">Eng</div>
+  <div className="hidden sm:block"> Free Shipping On All Orders Over $50</div>
+  <div className="ml-56 md:ml-20 sm:ml-10">Eng</div>
   <div className="flex mt-1">
     <FaAngleDown />
   </div>
-  <a href="./faqs" className="">Faqs</a>
+  <Link href="./faqs" className="hidden sm:block">Faqs</Link>
   <div className="flex mt-1">
     <CiCircleAlert />
   </div>
-  <div className="">Need Help</div>
+  <div className="hidden sm:block">Need Help</div>
 </div>
 
-<div className="h-24 bg-slate-200 text-2xl flex justify-between pl-40">
+{/* <!-- Hero Section --> */}
+<div className="h-24 bg-slate-200 text-2xl flex justify-between pl-40 ">
   <p className="flex mt-6 text-4xl gap-2">
-    <GiSofa />
+  <GiSofa />
     Comforty
   </p>
-  
-  <div className="flex gap-2 mr-20 mt-4 bg-slate-50 rounded-xl h-12 w-32 pl-2 ">
+
+  <div className="flex gap-2 mr-20 mt-4 bg-slate-50 rounded-xl h-12 w-32  pl-2">
     <div className="mt-3">
       <IoCartOutline />
     </div>
@@ -52,42 +56,102 @@ export default function Navbar() {
     </div>
   </div>
 </div>
+
+{/* <!-- Navigation Section --> */}
 <div className="flex justify-between ">
-  <div className="flex mt-8 ml-40 gap-3">
+  <div className="flex mt-8 ml-40 gap-3 md:ml-10 sm:ml-5">
     <p className="text-emerald-500">Home</p>
     <p>Shop</p>
     <p>Product</p>
     <p>Pages</p>
-    <a href="./aboutus">About</a>
+    <Link href="./about">About</Link>
   </div>
-  <span className="mt-8 mr-20">
-    <a href="./contactus">Contact:(808) 555-0111</a>
-  </span>
-</div>
-<div className="ml-56 mt-8 ">
-  <img src="/Header.png" width={800} height={450} alt="./public/Header.png" className="md:w-3/5 sm:w-4/5" />
+  <p className="mt-8 mr-20 md:mr-10 sm:mr-5">Contact:(808) 555-0111</p>
 </div>
 
-<div className="ml-56 mt-8 ">
-  <img src="/Company Logo.png" width={800} height={450} alt="./public/Company Logo.png" className="md:w-3/5 sm:w-4/5" />
+{/* <!-- About Section --> */}
+<div className="flex mt-8 ml-28 flex-wrap ">
+  <div className="max-w-md mx-auto bg-green-600 text-white rounded-lg shadow-md p-6 ">
+    <h2 className="text-2xl font-bold mb-4">About Us - Comforty</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+      amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis
+      natopecious natoque penatibus et magnis dis parturient montes, nascetur
+      ridiculus mus.
+    </p>
+  </div>
+  <div className="w-full  mb-4  sm:mb-0">
+    <Image
+      src="/chair.png"
+      alt="Chair"
+      width={200}
+      height={100}
+      className="rounded-lg"
+    />
+  </div>
 </div>
 
-<div className="ml-38 pl-6 mt-8 ">
-  <img src="/Featured Products.png" width={1200} height={500} alt="./public/Featured Products.png" className="md:w-4/5 sm:w-5/5" />
+{/* <!-- Features Section --> */}
+<div className="flex justify-between m-4 mt-24 flex-wrap md:flex-nowrap sm:flex-nowrap">
+  <div className="bg-gray-300 rounded-lg p-4 mt-4 text-center h-32 md:w-1/4 sm:w-1/2">
+    <h3 className="text-lg font-bold">Next Day Delivery</h3>
+    <p className="text-emerald-600">Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div className="bg-gray-300 rounded-lg p-4 text-center md:w-1/4 sm:w-1/2">
+    <h3 className="text-lg font-bold">Secure Payment</h3>
+    <p className="text-emerald-600">Consectetur adipiscing elit sed.</p>
+  </div>
+  <div className="bg-gray-300 rounded-lg p-4 text-center md:w-1/4 sm:w-1/2">
+    <h3 className="text-lg font-bold">Best Quality Products</h3>
+    <p className="text-emerald-600">Sed sit amet nulla auctor vestibulum.</p>
+  </div>
+  <div className="bg-gray-300 rounded-lg p-4 text-center md:w-1/4 sm:w-1/2">
+    <h3 className="text-lg font-bold">30 Days Return Policy</h3>
+    <p className="text-emerald-600">Magna sed convallis ex cum sociis.</p>
+  </div>
 </div>
 
-<div className="ml-38 pl-6 mt-8 ">
-  <img src="/Top Categotires.png" width={1200} height={500} alt="./public/Top Categotires.png" className="md:w-4/5 sm:w-5/5" />
+{/* <!-- Popular Products Section --> */}
+<div className="container mx-auto p-4 mt-10">
+  <h2 className="text-3xl font-bold mb-4">Popular Products</h2>
+  <div className="flex flex-wrap justify-between">
+    <div className="w-full   mb-4 ">
+      <Image
+        src="/sofa.png"
+        alt="Sofa"
+        width={300}
+        height={200}
+        className="rounded-lg"
+      />
+      <p className="text-lg font-bold mt-2">Sofa</p>
+      <p className="text-lg font-bold mt-2">$500</p>
+    </div>
+    <div className="w-full   mb-4 ">
+      <Image
+        src="/chair.png"
+        alt="Chair"
+        width={200}
+        height={100}
+        className="rounded-lg"
+      />
+      <p className="text-lg font-bold mt-2">Chair</p>
+      <p className="text-lg font-bold mt-2">$200</p>
+    </div>
+    <div className="w-full   mb-4 ">
+      <Image
+        src="/chair.png"
+        alt="Chair"
+        width={200}
+        height={100}
+        className="rounded-lg"
+      />
+      <p className="text-lg font-bold mt-2">Chair</p>
+      <p className="text-lg font-bold mt-2">$250</p>
+    </div>
+  </div>
 </div>
 
-<div className="ml-56 mt-12 ">
-  <img src="/hot-category.png" width={800} height={450} alt="./public/hot category.png" className="md:w-3/5 sm:w-4/5" />
-</div>
-
-<div className="ml-56 mt-12 ">
-  <img src="/Our Products.png" width={800} height={450} alt="./public/Our Products.png" className="md:w-3/5 sm:w-4/5" />
-</div>
-
+{/* <!-- Footer Section --> */}
 
 
 <footer className="mt-2 py-8">
